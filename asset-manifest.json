@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/e-commerce/static/css/main.492b4388.chunk.css",
+    "main.js": "/e-commerce/static/js/main.7fd231a9.chunk.js",
+    "main.js.map": "/e-commerce/static/js/main.7fd231a9.chunk.js.map",
+    "runtime-main.js": "/e-commerce/static/js/runtime-main.661addde.js",
+    "runtime-main.js.map": "/e-commerce/static/js/runtime-main.661addde.js.map",
+    "static/js/2.030f7a5a.chunk.js": "/e-commerce/static/js/2.030f7a5a.chunk.js",
+    "static/js/2.030f7a5a.chunk.js.map": "/e-commerce/static/js/2.030f7a5a.chunk.js.map",
+    "index.html": "/e-commerce/index.html",
+    "static/css/main.492b4388.chunk.css.map": "/e-commerce/static/css/main.492b4388.chunk.css.map",
+    "static/js/2.030f7a5a.chunk.js.LICENSE.txt": "/e-commerce/static/js/2.030f7a5a.chunk.js.LICENSE.txt",
+    "static/media/hero-1.88b9c92e.jpg": "/e-commerce/static/media/hero-1.88b9c92e.jpg",
+    "static/media/hero-2.336f26f0.jpg": "/e-commerce/static/media/hero-2.336f26f0.jpg",
+    "static/media/hero-3.6b243395.jpg": "/e-commerce/static/media/hero-3.6b243395.jpg",
+    "static/media/hero-4.bc0f836a.jpg": "/e-commerce/static/media/hero-4.bc0f836a.jpg",
+    "static/media/hero-5.81e8252c.jpg": "/e-commerce/static/media/hero-5.81e8252c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.661addde.js",
+    "static/js/2.030f7a5a.chunk.js",
+    "static/css/main.492b4388.chunk.css",
+    "static/js/main.7fd231a9.chunk.js"
+  ]
+}
