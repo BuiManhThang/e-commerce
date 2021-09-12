@@ -12,10 +12,10 @@ export const hero = [
     {name: 'img5', url: img5, slogan: 'Gaming and Work'},
 ]
 
-// const local = 'http://localhost:5000';
-const server = 'https://laptop-api-thang.herokuapp.com'
+const local = 'http://localhost:5000';
+// const server = 'https://laptop-api-thang.herokuapp.com'
 
-export const url = server;
+export const url = local;
 
 
 export const ads = {

@@ -79,7 +79,7 @@ const Nav = () => {
             <div className={styles.nav__container} ref={navContainer} >
                 <div className={styles.nav__top}>
                     <button onClick={handleOpenNav} className={`${styles.nav__btn} ${styles.nav__btn_toggle}`}><i className="fas fa-bars"></i></button>
-                    <h1 className={styles.nav__logo}><a href="/">Laptop Shop</a></h1>
+                    <h1 className={styles.nav__logo}><Link to="/e-commerce">Laptop Shop</Link></h1>
                     <div className={styles.contact}>
                         <p className={styles.contact__title}>Need Help</p>
                         <p className={styles.contact__phone}>
@@ -95,7 +95,7 @@ const Nav = () => {
                             {user.email !== '' &&
                                 <ul className={styles.accountList}>
                                     <li className={styles.accountItem}>
-                                        <Link to='/info' className={styles.accountBtn} >Info</Link>
+                                        <Link to='/e-commerce/info' className={styles.accountBtn} >Info</Link>
                                     </li>
                                     <li className={styles.accountItem}>
                                         <button onClick={() => {dispatch(logOut()); history.push('/')}} className={styles.accountBtn} >Log out</button>
@@ -126,8 +126,8 @@ const Nav = () => {
                                         {item.links.map((link, indexLink) => {
                                             return (
                                                 <li key={indexLink} className={styles.nav__sub_item} >
-                                                    {item.title === 'Manufacturers' && <Link onClick={handleLinkClick} className={styles.nav__sub_link} to={`/products?manufacturer=${link._id}`}>{link.name}</Link>}
-                                                    {item.title === 'Classes' && <Link onClick={handleLinkClick} className={styles.nav__sub_link} to={`/products?classes=${link._id}`}>{link.name}</Link>}
+                                                    {item.title === 'Manufacturers' && <Link onClick={handleLinkClick} className={styles.nav__sub_link} to={`/e-commerce/products?manufacturer=${link._id}`}>{link.name}</Link>}
+                                                    {item.title === 'Classes' && <Link onClick={handleLinkClick} className={styles.nav__sub_link} to={`/e-commerce/products?classes=${link._id}`}>{link.name}</Link>}
                                                 </li>
                                             )
                                         })}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LoadMore = () => {
     return (
-        <Link to='/products' className={styles.btn}>
+        <Link to='/e-commerce/products' className={styles.btn}>
             Load More
         </Link>
     )

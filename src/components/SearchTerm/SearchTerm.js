@@ -35,7 +35,7 @@ const SearchTerm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        history.push(`/products?search=${value}`);
+        history.push(`/e-commerce/products?search=${value}`);
         setValue('');
         dispatch(setResult([]));
         dispatch(closeSearch());
@@ -56,7 +56,7 @@ const SearchTerm = () => {
                             const finalPrice = price - (price * (sale / 100));
                             return (
                                 <li key={_id} className={styles.item} >
-                                    <Link to={`/product/${_id}`} onClick={handleClickLink} className={styles.link}>
+                                    <Link to={`/e-commerce/product/${_id}`} onClick={handleClickLink} className={styles.link}>
                                         <img src={`${url}/images/${imgs[0]}`} alt={name} className={styles.img} />
                                         <div className={styles.text}>
                                             <p className={styles.name}>{name}</p>

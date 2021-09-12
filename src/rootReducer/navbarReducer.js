@@ -2,12 +2,12 @@ const items = [
     {
         type: 'link',
         title: 'Home',
-        url: '/'
+        url: '/e-commerce'
     },
     {
         type: 'link',
         title: 'Products',
-        url: '/products'
+        url: '/e-commerce/products'
     },
     {
         type: 'button',
@@ -15,7 +15,7 @@ const items = [
         links: [
             
         ],
-        url: '/manufacturer?page=1'
+        url: '/e-commerce/manufacturer?page=1'
     },
     {
         type: 'button',
@@ -23,12 +23,12 @@ const items = [
         links: [
             
         ],
-        url: '/class'
+        url: '/e-commerce/class'
     },
     {
         type: 'link',
         title: 'Contact',
-        url: '/contact'
+        url: '/e-commerce/contact'
     },
     
 ]

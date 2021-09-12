@@ -33,7 +33,7 @@ const Receipt = ({data}) => {
                         return (
                             <li className={styles.item} key={product._id}>
                                 <img src={`${url}/images/${product.imgs[0]}`} alt={product.name} className={styles.img} />
-                                <Link to={`/product/${product._id}`} className={styles.link} >{product.name}</Link>
+                                <Link to={`/e-commerce/product/${product._id}`} className={styles.link} >{product.name}</Link>
                                 <p className={styles.price} >${product.price - (product.price * (product.sale / 100))} {product.sale !== 0 && <span>${product.price}</span> }</p>
                                 <p className={styles.quantity}><strong>Quantity: </strong>{quantity}</p>
                             </li>

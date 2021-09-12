@@ -42,7 +42,7 @@ const Hero = () => {
                             <div className={styles.overlay}>
                                 <h3 className={styles.slogan}>{slogan}</h3>
                                 <div className={styles.linkContainer}>
-                                    <Link to="/products?page=1" className={styles.link}>Shop now</Link>
+                                    <Link to="/e-commerce/products?page=1" className={styles.link}>Shop now</Link>
                                     <div className={styles.linkBgc}></div>
                                 </div>
                             </div>

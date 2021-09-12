@@ -81,7 +81,7 @@ const CheckOut = () => {
                                 return (
                                     <li key={product._id} className={styles.item}>
                                         <img src={`${url}/images/${product.img}`} alt={product.name} className={styles.img} />
-                                        <Link to={`product/${product._id}`} className={styles.name} >{product.name}</Link>
+                                        <Link to={`/e-commerce/product/${product._id}`} className={styles.name} >{product.name}</Link>
                                         <p className={styles.price} >{price} {product.sale > 0 && <span>{product.price}</span>}</p>
                                         <div className={styles.control}>
                                             <button onClick={() => dispatch(increment(product._id))} className={styles.btn}>+</button>

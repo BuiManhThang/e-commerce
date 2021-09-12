@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import styles from './Footer.module.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     const {items} = useSelector((state) => state.nav);
@@ -33,7 +34,7 @@ const Footer = () => {
                         {links.map((link, index) => {
                             return (
                                 <li key={index} className={styles.footer__link_item}>
-                                    <a href={link.url} className={styles.footer__link}>{link.title}</a>
+                                    <Link to={link.url} className={styles.footer__link}>{link.title}</Link>
                                 </li>
                             )
                         })}

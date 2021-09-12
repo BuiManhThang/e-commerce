@@ -38,23 +38,23 @@ function App() {
         {isOpenUpdateInfo && <UpdateInfo></UpdateInfo>}
         {isOpenFormProduct && <AddProduct/>}
         <Switch>
-          <Route path="/" exact>
+          <Route path="/e-commerce" exact>
             <Home/>
           </Route>
-          <Route path="/checkout">
+          <Route path="/e-commerce/checkout">
             <CheckOut/>
           </Route>
-          <Route path="/product/:id">
+          <Route path="/e-commerce/product/:id">
             <ProductDetail/>
           </Route>
-          <Route path="/products">
+          <Route path="/e-commerce/products">
             <Products/>
           </Route>
-          <Route path="/contact">
+          <Route path="/e-commerce/contact">
             <Contact/>
           </Route>
           {user.email !== '' &&
-            <Route path="/info">
+            <Route path="/e-commerce/info">
               <Info/>
             </Route>
           }

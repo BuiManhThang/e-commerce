@@ -22,7 +22,7 @@ const Card = () => {
         <div className={`${styles.container} ${isOpen ? styles.container__active : ''}`}>
             <div className={styles.header}>
                 <button onClick={() => dispatch(closeCard())} className={styles.close}><i className="fas fa-times"></i></button>
-                <Link to="/checkout" onClick={() => dispatch(closeCard())} className={styles.checkout} >Check Out Now</Link>
+                <Link to="/e-commerce/checkout" onClick={() => dispatch(closeCard())} className={styles.checkout} >Check Out Now</Link>
                 <p className={styles.total}><span>Total: </span> ${total}</p>
             </div>
             <div className={styles.list_container}>
@@ -31,7 +31,7 @@ const Card = () => {
                         {products.map(product => {
                             return <li key={product._id} className={styles.item}>
                                 <img src={`${url}/images/${product.img}`} alt={product.name} className={styles.img} />
-                                <Link to={`/product/${product._id}`} className={styles.link} >{product.name}</Link>
+                                <Link to={`/e-commerce/product/${product._id}`} className={styles.link} >{product.name}</Link>
                                 <p className={styles.price} >${product.price - (product.price * (product.sale / 100))} {product.sale !== 0 && <span>${product.price}</span> }</p>
                                 <div className={styles.control}>
                                     <button onClick={() => dispatch(increment(product._id))} className={styles.btn}>+</button>

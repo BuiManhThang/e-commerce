@@ -12,7 +12,7 @@ const WhyChoose = () => {
                     <h3 className={styles.card__title} >Satisfaction Guaranteed</h3>
                     <p className={styles.card__text} >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <button className={styles.card__btn} >
-                        <Link to="/products?page=1">shop now</Link>
+                        <Link to="/e-commerce/products?page=1">shop now</Link>
                         <div className={styles.card__btn__bgc}></div>
                     </button>
                 </div>
@@ -21,7 +21,7 @@ const WhyChoose = () => {
                     <h3 className={styles.card__title} >Fast Shipping</h3>
                     <p className={styles.card__text} >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <button className={styles.card__btn} >
-                        <Link to="/products?page=1">shop now</Link>
+                        <Link to="/e-commerce/products?page=1">shop now</Link>
                         <div className={styles.card__btn__bgc}></div>
                     </button>
                 </div>
@@ -30,7 +30,7 @@ const WhyChoose = () => {
                     <h3 className={styles.card__title} >Free Repair</h3>
                     <p className={styles.card__text} >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <button className={styles.card__btn} >
-                        <Link to="/products?page=1">shop now</Link>
+                        <Link to="/e-commerce/products?page=1">shop now</Link>
                         <div className={styles.card__btn__bgc}></div>
                     </button>
                 </div>
