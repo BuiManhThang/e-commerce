@@ -48,9 +48,7 @@ const AddProduct = () => {
     const [imgs, setImgs] = useState(null);
     const [manufacturer, setManufacturer] = useState(manufacturers[0]._id);
     const [classes, setClasses] = useState(classesItems[0]._id);
-
-
-
+    
     const handleClickOutline = (e) => {
         if(e.target === outline.current) {
             dispatch(closeFormProduct());
@@ -130,20 +128,27 @@ const AddProduct = () => {
                     <Input title='Screen size X' name='screenSizeX' id='product-screenSizeX' type='number' value={screenSizeX} onChangeInput={(e) => setScreenSizeX(e.target.value)} ></Input>
                     <Input title='Screen size Y' name='screenSizeY' id='product-screenSizeY' type='number' value={screenSizeY} onChangeInput={(e) => setScreenSizeY(e.target.value)} ></Input>
                     <Input title='Screen freq' name='screenFreq' id='product-screenFreq' type='number' value={screenFreq} onChangeInput={(e) => setScreenFreq(e.target.value)} ></Input>
-                    <div className={styles.changeAvata}>
-                        <label htmlFor="product-images">Images</label>
-                        <input type="file" name="images" id="product-images" multiple accept="image/*" onChange={handleUpLoadImgs} />
+                    <div className={styles.formControl}>
+                        <label className={styles.label} htmlFor="product-images">Images</label>
+                        <input className={styles.input} type="file" name="images" id="product-images" multiple accept="image/*" onChange={handleUpLoadImgs} />
                     </div>
-                    <select name="manufacturer" id="product-manufacturer" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)}>
-                        {manufacturers.map((item) => {
-                            return <option key={item._id} value={item._id}>{item.name}</option>
-                        })}
-                    </select>
-                    <select name="classes" id="product-classes" value={classes} onChange={(e) => setClasses(e.target.value)}>
+                    <div className={styles.formControl}>
+                        <label className={styles.label} htmlFor="product-manufacturer">Manufacture</label>
+                        <select className={styles.input} name="manufacturer" id="product-manufacturer" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)}>
+                            {manufacturers.map((item) => {
+                                return <option key={item._id} value={item._id}>{item.name}</option>
+                            })}
+                        </select>
+                    </div>
+                    <div className={styles.formControl}>
+                        <label className={styles.label} htmlFor="product-classes">Class</label>
+                        <select className={styles.input} name="classes" id="product-classes" value={classes} onChange={(e) => setClasses(e.target.value)}>
                         {classesItems.map((item) => {
                             return <option key={item._id} value={item._id}>{item.name}</option>
                         })}
                     </select>
+                    </div>
+                    
                     {(loading || errors) ? <button onClick={(e) => e.preventDefault()} className={styles.loading}>Loading...</button> : <button type='submit' className={styles.submit}>Submit</button>} 
                 </form>
             </div>

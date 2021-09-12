@@ -30,17 +30,20 @@ const Nav = () => {
 
     useEffect(() => {
         const scrollFunc = () => {
-            if(window.scrollY > 94) {
-                nav.current.classList.add(styles.nav__list_scroll);
-                navContainer.current.style.paddingBottom = '56.67px';
+            if(window.innerWidth > 767) {
+                if(window.scrollY > 94) {
+                    nav.current.classList.add(styles.nav__list_scroll);
+                    navContainer.current.style.paddingBottom = '56.67px';
+                } else {
+                    nav.current.classList.remove(styles.nav__list_scroll);
+                    navContainer.current.style.paddingBottom = '0px';
+                }
             } else {
                 nav.current.classList.remove(styles.nav__list_scroll);
                 navContainer.current.style.paddingBottom = '0px';
             }
         }
-        if(window.innerWidth > 767) {
-            document.addEventListener('scroll', scrollFunc);
-        }
+        document.addEventListener('scroll', scrollFunc);
         return () => {
             document.removeEventListener('scroll', scrollFunc);
         }
@@ -56,7 +59,7 @@ const Nav = () => {
     }
 
     const handleLinkClick = () => {
-        if(window.innerWidth <= 575) {
+        if(window.innerWidth <= 767) {
             dispatch(closeNav());
             setActiveSubmenu('');
         }
@@ -98,7 +101,7 @@ const Nav = () => {
                                         <Link to='/e-commerce/info' className={styles.accountBtn} >Info</Link>
                                     </li>
                                     <li className={styles.accountItem}>
-                                        <button onClick={() => {dispatch(logOut()); history.push('/')}} className={styles.accountBtn} >Log out</button>
+                                        <button onClick={() => {dispatch(logOut()); history.push('/e-commerce')}} className={styles.accountBtn} >Log out</button>
                                     </li>
                                 </ul>
                             }

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { url } from "../data"
+import { closeFormProduct } from "./adminAction"
 
 const setLoading = () => {
     return {
@@ -56,6 +57,7 @@ export const createProduct = (data) => async (dispatch) => {
                 "Content-Type": "multipart/form-data"
             }
         });
+        dispatch(closeFormProduct());
         dispatch(setErrorsProductList(null));
     } catch(err) {
         dispatch(setErrorsProductList(err.response?.statusText || err.message));
